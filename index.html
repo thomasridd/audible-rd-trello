@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Data returns</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+    <![endif]-->
+</head>
+
+<body>
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<a class="navbar-brand" href="#">Data returns</a>
+
+<!--<div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+    <!--<ul class="navbar-nav mr-auto">-->
+        <!--<li class="nav-item active">-->
+            <!--<a class="nav-link" href="index.html">Chart 1 <span class="sr-only">(current)</span></a>-->
+        <!--</li>-->
+        <!--<li class="nav-item">-->
+            <!--<a class="nav-link" href="chart2.html">Chart 2 </a>-->
+        <!--</li>-->
+        <!--<li class="nav-item">-->
+            <!--<a class="nav-link" href="chart3.html">Chart 3 </a>-->
+        <!--</li>-->
+        <!--<li class="nav-item">-->
+            <!--<a class="nav-link" href="chart4.html">Chart 4 </a>-->
+        <!--</li>-->
+        <!--<li class="nav-item">-->
+            <!--<a class="nav-link" href="chart5.html">Chart 5 </a>-->
+        <!--</li>-->
+        <!--<li class="nav-item">-->
+            <!--<a class="nav-link" href="chart6.html">Chart 6 </a>-->
+        <!--</li>-->
+    <!--</ul>-->
+<!--</div>-->
+</nav>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h1 class="chart-page-title">Data progress</h1>
+            <div class = "instructions">
+                <!--Press left and right to step along the timeline, up and down to switch between series, space to speak a data point, enter to play the entire series-->
+            </div>
+            <div id="container" class="chart-container" style="height: 400px"></div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://api.trello.com/1/client.js?key=96d724e7c72db4a9b322ef382e54a796"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.js"></script>
+<script src="js/trellochart.js"></script>
+
+
+<script>
+    settings = {};
+    $(document).ready(setupTrelloActivityChart(settings));
+</script>
+
+
+<footer>
+    <div class="container">
+    <p>&copy; 2017</p>
+    </div>
+</footer>
+</body>
+</html>
