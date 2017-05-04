@@ -107,7 +107,7 @@ function buildActivityChart() {
         var listNames = [];
         for(l in lists) {
             listDict[lists[l].id] = l;
-            listNames.push(lists[l].name);
+            if(l > 0) { listNames.push(lists[l].name); }
         }
 
         var currentActivities = getActivities(lists, listDict, cards);
@@ -165,9 +165,6 @@ function addCurrentCards(flow_data, cards, lists) {
         }
         flow_data[s].data[time_index] = count;
     }
-
-    console.log(lists);
-    console.log(cards);
 }
 
 function setExistingData(flow_data) {
@@ -187,10 +184,10 @@ function setExistingDataItem(flow_data, month, data_item) {
 }
 
 function getActivities(lists, listDict, cards) {
-    var activities = emptySeries(lists.length);
+    var activities = emptySeries(lists.length - 1);
     for(c in cards) {
         var card = cards[c];
-        var listNumber = listDict[card.idList];
+        var listNumber = listDict[card.idList] - 1;
         var deptNumber = getDepartment(card);
 
         if(!(deptNumber === undefined)) {
