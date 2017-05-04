@@ -22,6 +22,9 @@ function drawTrelloActivityChart(categories, data) {
         legend: {
             reversed: true
         },
+        exporting: {
+            enabled: true
+        },
         plotOptions: {
             series: {
                 stacking: 'normal'
@@ -65,6 +68,9 @@ function drawTrelloActivityFlow(categories, series) {
                     lineColor: '#666666'
                 }
             }
+        },
+        exporting: {
+            enabled: true
         },
         series: series
     });
